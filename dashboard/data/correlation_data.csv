@@ -1,0 +1,18 @@
+Features,deaths,deaths_age_adj,death_rate,Dem_Grouping
+pct_hs_diploma,-0.065003877,-0.040102499,-0.038208997,"Edu, Pov, Income, Unempl"
+pct_bachelors,0.346380383,0.190810558,0.190285775,"Edu, Pov, Income, Unempl"
+pov_pct,-0.059760124,0.03373479,0.035856556,"Edu, Pov, Income, Unempl"
+median_hh_inc,0.278553864,0.210849725,0.210456764,"Edu, Pov, Income, Unempl"
+unemploy_rate,0.000578099,0.073802055,0.076370115,"Edu, Pov, Income, Unempl"
+pct_male,-0.116828685,-0.125759522,-0.120790653,"Age, Gender"
+pct_female,0.116828685,0.125759522,0.120790653,"Age, Gender"
+pct_white,-0.135868637,0.024675709,0.020654526,Ethnicity
+pct_black,0.084111335,-0.047212659,-0.044718333,Ethnicity
+pct_aina,-0.038798961,-0.03829413,-0.037906682,Ethnicity
+pct_apia,0.375196815,0.108195215,0.115595633,Ethnicity
+pct_hispanic,0.139020362,-0.014857735,-0.012424175,Ethnicity
+pct_15_19,-0.061152439,-0.134765288,-0.138041695,"Age, Gender"
+pct_20_24,0.0930496,0.078447239,0.074935277,"Age, Gender"
+pct_25_29,0.267437575,0.159635474,0.168572444,"Age, Gender"
+pct_30_34,0.232711208,0.064484218,0.07740196,"Age, Gender"
+pct_35_39,0.08122,-0.057028006,-0.046346969,"Age, Gender"

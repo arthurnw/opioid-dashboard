@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+.county {
+  fill: #C0C0C0;
+  stroke: #C0C0C0;
+}
+.county:hover{
+    opacity: .6;
+}
+
+.state {
+  fill: none;
+  stroke: #000000;
+  stroke-linejoin: round;
+}
+.state:hover{
+    opacity: .6;
+  }
+
+a {
+    color : rgb(2, 12, 100);
+    font-family: helvetica;
+    text-decoration: none;
+    padding-left: 8px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: black;
+  }
+
+  a:visited {
+    color: rgb(2, 12, 100);
+  }
+
+body {
+    height: 100%;
+    font-family: helvetica;
+}
+
+h1 {
+    font-size: 30px;
+  }
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 13px;
+}
+
+ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 10px;
+    font-size: 13px;
+    margin: 0 0 5px 0;
+}
+
+li:before {
+    content: "•";
+    padding-right: 8px;
+    color: blue;
+}
+
+.legend {
+    font-size: 12px;
+    font-family : Helvetica;
+    font-weight: bold;
+}
+
+.dropdown {
+    margin-left: 5px;
+    display: inline;
+    background: #000000;
+    color: #FFF;
+}
+.dropdown_list {
+    list-style: none;
+    display: none;
+    position: absolute;
+    color: red;
+}
+.dropdown_list li {
+    background: yellow;
+}
+.dropdown:hover {
+    background: #333;
+}
+.dropdown:hover .dropdown_list,
+.dropdown_list:hover {
+    display: block;
+    top: 100%;
+}
+
+header {
+    background-color: rgb(2, 1, 75);
+    padding: 5px;
+    text-align: center;
+    /*font-size: 35px;*/
+    color: white;
+}
+hr {
+    overflow: visible; /* For IE */
+    height: 25px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    /*height: 100vh;*/
+}
+
+.left {
+    width: 23%;
+
+}
+
+.right {
+    width: 77%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main {
+    float: left;
+    padding: 0px;
+}
+.mleft {
+    width: 80%;
+}
+
+.mright {
+    width: 20%;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.mainrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bottom {
+    float: left;
+    padding: 0px;
+    /*height: 350px; /* Should be removed. Only for demonstration */
+    text-align: center;
+}
+.bleft {
+    width: 55%;
+}
+.bmiddle {
+    width: 30%;
+}
+.bright {
+    width: 15%;
+    padding: 76px 10px 0 ;
+}
+.hmleft {
+    width: 80%;
+}
+
+.hmright {
+    width: 20%;
+    padding: 30px 5px 0 ;
+}
+
+.bottomrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+.d3-hm-tip {
+    line-height: 1;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.spr_axis .domain {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 1.5;
+}
+
+.dot {
+    fill: #ffab00;
+    stroke: #000000;
+}
+.dot:hover {
+    fill: #FFFFFF;
+}

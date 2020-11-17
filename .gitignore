@@ -1,0 +1,13 @@
+acquisition/.ipynb_checkpoints/wonder_form_scraping-checkpoint.ipynb
+acquisition/Multiple Cause of Death, 1999-2017.txt
+acquisition/results1.tab
+acquisition/cdc_mcd_data/*.tab
+acquisition/cdc_mcd_data/*/
+acquisition/cdc_mcd_data/*/*.tab
+debug_file.txt
+request_log.txt
+acquisition/ancillary/demographics_2003/*
+acquisition/ancillary/demographics*.csv
+acquisition/data_raw/demographics*.csv
+*.env
+.ipynb_checkpoints

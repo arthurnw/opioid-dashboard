@@ -1,0 +1,122 @@
+"Notes"	"State"	"State Code"	Deaths	Population	Crude Rate	Age Adjusted Rate
+	"Alabama"	"01"	1648	29102148	5.7	5.9
+	"Alaska"	"02"	508	4423434	11.5	11.3
+	"Arizona"	"04"	4012	40686769	9.9	10.1
+	"Arkansas"	"05"	1066	17845604	6.0	6.2
+	"California"	"06"	11923	233107939	5.1	4.9
+	"Colorado"	"08"	2968	32416088	9.2	8.9
+	"Connecticut"	"09"	3660	21538626	17.0	17.3
+	"Delaware"	"10"	856	5638393	15.2	15.9
+	"District of Columbia"	"11"	718	3985035	18.0	17.6
+	"Florida"	"12"	11875	120631836	9.8	10.2
+	"Georgia"	"13"	4566	60964065	7.5	7.5
+	"Hawaii"	"15"	382	8503626	4.5	4.3
+	"Idaho"	"16"	526	9897341	5.3	5.6
+	"Illinois"	"17"	8959	77101527	11.6	11.6
+	"Indiana"	"18"	3704	39624642	9.3	9.8
+	"Iowa"	"19"	1069	18676031	5.7	6.0
+	"Kansas"	"20"	942	17415936	5.4	5.6
+	"Kentucky"	"21"	5102	26505422	19.2	20.1
+	"Louisiana"	"22"	1742	27913762	6.2	6.4
+	"Maine"	"23"	1295	7984297	16.2	17.5
+	"Maryland"	"24"	7223	35864809	20.1	19.7
+	"Massachusetts"	"25"	8172	40550396	20.2	20.4
+	"Michigan"	"26"	7751	59502046	13.0	13.4
+	"Minnesota"	"27"	2070	32842844	6.3	6.4
+	"Mississippi"	"28"	841	17935371	4.7	4.9
+	"Missouri"	"29"	4414	36419952	12.1	12.7
+	"Montana"	"30"	299	6169847	4.8	5.1
+	"Nebraska"	"31"	308	11328926	2.7	2.8
+	"Nevada"	"32"	2459	17217108	14.3	13.7
+	"New Hampshire"	"33"	1829	7979188	22.9	24.4
+	"New Jersey"	"34"	6247	53610230	11.7	11.7
+	"New Mexico"	"35"	2075	12510591	16.6	17.4
+	"New York"	"36"	13350	118358094	11.3	11.1
+	"North Carolina"	"37"	7264	60007106	12.1	12.4
+	"North Dakota"	"38"	174	4432775	3.9	4.1
+	"Ohio"	"39"	15697	69595601	22.6	23.8
+	"Oklahoma"	"40"	2804	23309202	12.0	12.3
+	"Oregon"	"41"	1990	24064875	8.3	8.1
+	"Pennsylvania"	"42"	9026	76716813	11.8	12.4
+	"Rhode Island"	"44"	1346	6329339	21.3	21.4
+	"South Carolina"	"45"	2930	29212678	10.0	10.3
+	"South Dakota"	"46"	195	5124995	3.8	4.0
+	"Tennessee"	"47"	5847	39469050	14.8	15.1
+	"Texas"	"48"	7455	163100660	4.6	4.5
+	"Utah"	"49"	2681	17848030	15.0	16.2
+	"Vermont"	"50"	484	3753496	12.9	13.8
+	"Virginia"	"51"	5123	50037382	10.2	10.3
+	"Washington"	"53"	4152	42794042	9.7	9.3
+	"West Virginia"	"54"	3707	11051130	33.5	35.8
+	"Wisconsin"	"55"	4124	34572203	11.9	12.3
+	"Wyoming"	"56"	291	3494146	8.3	8.5
+"Total"			199849	1919165446	10.4	10.5
+"---"
+"Dataset: Multiple Cause of Death, 1999-2017"
+"Query Parameters:"
+"MCD - ICD-10 Codes: T40.0 (Opium); T40.1 (Heroin); T40.2 (Other opioids); T40.3 (Methadone); T40.4 (Other synthetic narcotics);"
+"T40.6 (Other and unspecified narcotics)"
+"UCD - ICD-10 Codes: X40 (Accidental poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics); X41"
+"(Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not"
+"elsewhere classified); X42 (Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not"
+"elsewhere classified); X43 (Accidental poisoning by and exposure to other drugs acting on the autonomic nervous system); X44"
+"(Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances); X49 (Accidental"
+"poisoning by and exposure to other and unspecified chemicals and noxious substances); X60 (Intentional self-poisoning by and"
+"exposure to nonopioid analgesics, antipyretics and antirheumatics); X61 (Intentional self-poisoning by and exposure to"
+"antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified); X62 (Intentional"
+"self-poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified); X63 (Intentional"
+"self-poisoning by and exposure to other drugs acting on the autonomic nervous system); X64 (Intentional self-poisoning by and"
+"exposure to other and unspecified drugs, medicaments and biological substances); X83 (Intentional self-harm by other specified"
+"means); X84 (Intentional self-harm by unspecified means); X85 (Assault by drugs, medicaments and biological substances); Y10"
+"(Poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics, undetermined intent); Y11 (Poisoning by and"
+"exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified, undetermined"
+"intent); Y12 (Poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified,"
+"undetermined intent); Y13 (Poisoning by and exposure to other drugs acting on the autonomic nervous system, undetermined"
+"intent); Y14 (Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined"
+"intent); Y33 (Other specified events, undetermined intent); Y34 (Unspecified event, undetermined intent)"
+"Year/Month: 2012; 2013; 2014; 2015; 2016; 2017"
+"Group By: State"
+"Show Totals: True"
+"Show Zero Values: True"
+"Show Suppressed: True"
+"Standard Population: 2000 U.S. Std. Population"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/mcd.html for more information."
+"---"
+"Query Date: Nov 19, 2019 9:32:20 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Multiple Cause of Death"
+"1999-2017 on CDC WONDER Online Database, released December, 2018. Data are from the Multiple Cause of Death Files, 1999-2017, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/mcd-icd10.html on Nov 19, 2019 9:32:20 PM"
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#2014-Revision."
+"2. The populations used to calculate standard age-adjusted rates are documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#2000 Standard Population."
+"3. The method used to calculate age-adjusted rates is documented here: More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#Age-Adjusted Rates."
+"4. Deaths for persons of unknown age are included in counts and crude rates, but are not included in age-adjusted rates."
+"5. The population figures for year 2017 are bridged-race estimates of the July 1 resident population, from the Vintage 2017"
+"postcensal series released by NCHS on June 27, 2018. The population figures for year 2016 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2016 postcensal series released by NCHS on June 26, 2017. The population figures for"
+"year 2015 are bridged-race estimates of the July 1 resident population, from the Vintage 2015 postcensal series released by NCHS"
+"on June 28, 2016. The population figures for year 2014 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2014 postcensal series released by NCHS on June 30, 2015. The population figures for year 2013 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2013 postcensal series released by NCHS on June 26, 2014. The"
+"population figures for year 2012 are bridged-race estimates of the July 1 resident population, from the Vintage 2012 postcensal"
+"series released by NCHS on June 13, 2013. Population figures for 2011 are bridged-race estimates of the July 1 resident"
+"population, from the county-level postcensal Vintage 2011 series released by NCHS on July 18, 2012. Population figures for 2010"
+"are April 1 Census counts. The population figures for years 2001 - 2009, are bridged-race estimates of the July 1 resident"
+"population, from the revised intercensal county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population"
+"figures for 2000 are April 1 Census counts. Population figures for 1999 are from the 1990-1999 intercensal series of July 1"
+"estimates. Population figures for Infant Age Groups are the number of live births. <br/><b>Note:</b> Rates and population"
+"figures for years 2001 - 2009 differ slightly from previously published reports, due to use of the population estimates which"
+"were available at the time of release."
+"6. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd.html#Age Group."
+"7. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/mcd.html#ICD-10 Changes."

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Team JAKEWAMA - Opioid Mortality Rate</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+    </head>
+
+
+    <body>
+        <header>
+            <h2>Opioid-Related Mortality Rate</h2>
+            <h5>Team JAKEWAMA</h5>
+        </header>
+
+        <div class="row">
+            <div class="column left" style="background-color:#aaa;">
+                <h2>Prediction View</h2>
+                <p>Leverages demographic features to predict mortality rates between 2018 - 2023 at the county-level.<br><br></p>
+                <p><strong>Change to: </strong><a href="index.html">Investigation View</a><br><br>Investigate the historical and current demographic and opioid mortality rate data.<br><br></p>
+                <h2>Map Criteria</h2>
+                <p><b>Year Range:</b>&emsp; <b>2018 - 2023</b>  (prediction)</p>
+                <p><b>Metric:</b>
+                <select class="dropdown" id="selectMetric" autocomplete="off">
+                        <option value='{"metric" : "deaths_age_adj" , "label" : "Age-Adjusted Death Rate"}' selected="selected">Age-Adjusted Death Rate</option>
+                        <option value='{"metric" : "md_per_100k"    , "label" : "Mean Deaths per 100k"}'>Mean Deaths per 100k</option>
+                </select><br><br></p>
+                <p id="metricDesc"></p><br>
+
+                <h2>Map Instructions</h2>
+                <h5>Full US View:</h5>
+                <ul>
+                    <li>Hover over an area to see statistics</li>
+                    <li>Double click a state to zoom in to County View</li>
+                </ul>
+                <h5>Zoomed County View:</h5>
+                <ul>
+                    <li>Click a county to update sub plots</li>
+                    <li>Double click the state to zoom out</li>
+                    <li>Double click an adjacent state to change state</li>
+                </ul>
+            </div>
+
+            <div class="column right" style="background-color:#ccc;">
+
+                <div class = "mainrow" >
+                        <div class="main mleft" style="background-color:#ccc;" id="map_container">
+                        </div>
+                        <div class="main mright" style="background-color:#ccc;" id="map_legend">
+                        </div>
+                </div>
+
+                <div class = "bottomrow" id='brow' style="text-align: center;">
+                    <hr>
+                    <div class="bottom hmleft" style="background-color:#ccc;" id="heatmap_left">
+                    </div>
+                    <div class="bottom hmright" style="background-color:#ccc;" id="heatmap_right">
+                        <h4>Demographic Category:</h4>
+                        <select class="dropdown" id="selectHeatmap" >
+                            <option value='0' selected="selected">Age, Gender</option>
+                            <option value='1'> Ethnicity</option>
+                            <option value='2'> Edu, Pov, Income, Unempl</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="assets/d3-tip.js"></script>
+        <script type="text/javascript" src="assets/predict.js"></script>
+
+    </body>
+
+</html>

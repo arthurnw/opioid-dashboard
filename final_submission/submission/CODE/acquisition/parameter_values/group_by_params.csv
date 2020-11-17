@@ -1,0 +1,35 @@
+﻿Code,Label
+D77.V10-level1,Census Region
+D77.V10-level2,Census Division
+D77.V27-level1,HHS Region
+D77.V9-level1,State
+D77.V9-level2,County
+D77.V19,2013 Urbanization
+D77.V11,2006 Urbanization
+D77.V5,Age Groups
+D77.V7,Gender
+D77.V17,Hispanic Origin
+D77.V8,Race
+D77.V1-level1,Year
+D77.V1-level2,Month
+D77.V24,Weekday
+D77.V20,Autopsy
+D77.V21,Place of Death
+D77.V28,UCD - 15 Leading Causes of Death
+D77.V29,UCD - 15 Leading Causes of Death (Infants)
+D77.V2-level1,UCD - ICD Chapter
+D77.V2-level2,UCD - ICD Sub-Chapter
+D77.V2-level3,Underlying Cause of death
+D77.V4,UCD - ICD-10 113 Cause List
+D77.V12,UCD - ICD-10 130 Cause List (Infants)
+D77.V22,UCD - Injury Intent
+D77.V23,UCD - Injury Mechanism &amp; All Other Leading Causes
+D77.V25-level1,UCD - Drug/Alcohol Induced
+D77.V25-level2,UCD - Drug/Alcohol Induced Cause
+D77.V13-level1,MCD - ICD Chapter
+D77.V13-level2,MCD - ICD Sub-Chapter
+D77.V13-level3,Multiple Cause of death
+D77.V15,MCD - ICD-10 113 Cause List
+D77.V16,MCD - ICD-10 130 Cause List (Infants)
+D77.V26-level1,MCD - Drug/Alcohol Induced
+D77.V26-level2,MCD - Drug/Alcohol Induced Cause

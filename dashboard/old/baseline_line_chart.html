@@ -1,0 +1,226 @@
+<html lang="en">
+    <head>
+        <!-- define the encoding -->
+        <meta charset="utf-8">
+        <!-- set the title of the webpage -->
+        <title></title>
+
+        <!-- set the style and create bar class -->
+        <style>
+            .line {
+            fill: none;
+            stroke: #ffab00;
+            stroke-width: 1.5;
+            }
+
+            .overlay {
+            fill: none;
+            pointer-events: all;
+            }
+
+
+            .focus circle {
+            fill: none;
+            stroke: steelblue;
+            }
+
+            .axis path,
+            .axis line {
+              fill: none;
+              stroke: #000;
+              shape-rendering: crispEdges;
+            }
+
+            div.tooltip {
+            color: white;
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: rgba(0,0,0,.8);
+            border: 2px solid black;
+            pointer-events: none;
+          }
+
+        </style>
+
+        <!--  specify the js libs to import -->
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+      </head>
+      <body>
+      <svg width="300" height="175" id="svg1"></svg>
+          <script type="text/javascript">
+
+          // Define margins
+          var margin = {top: 50, right: 50, bottom: 50, left: 100}
+            , width = 850 - margin.left - margin.right // Use the window's width
+            , height = 470 - margin.top - margin.bottom; // Use the window's height
+
+
+          // Liquid variable inputs based on selectors
+          var metric_input = 'deaths_age_adj';
+          var county_selection = '1001';
+
+          // Parse the date / time
+          var parseDate = d3.timeParse("%Y");
+
+          // Define scales
+          var xScale = d3.scaleTime().range([0, width]);
+          var yScale = d3.scaleLinear().range([height, 0]);
+          var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+
+          // Define axes
+          var xAxis = d3.axisBottom().scale(xScale);
+          var yAxis = d3.axisLeft().scale(yScale);
+
+          // Function to draw line(s)
+          var line = d3.line()
+              .x(function(d) { return xScale(d.year); })
+              .y(function(d) { return yScale(d.metric_value); })
+              // defined() method handles missing data (omits from visualizing)
+              .defined(function(d) { return d.metric_value; });
+
+
+          // dynamic label function dependent on metric_input selection
+          function label_metric(death_metric){
+            if (death_metric == 'age_adj'){return 'Age-Adjusted Death Rate';}
+            if (death_metric == 'hello'){return 'hello';}}
+
+
+
+          // Initialize svg object
+          var svg1 = d3.select("#svg1")
+              .attr("width", width + margin.left + margin.right+15)
+              .attr("height", height + margin.top + margin.bottom+15)
+            .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+          // Define the div for the tooltip
+          const div = d3
+            .select('body')
+            .append('div')
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+
+
+
+          // read the data in
+          d3.csv("line_chart_input.csv").then(function(data) {
+            color.domain(d3.keys(data[0]).filter(function(key) { return (key != "year" && key != "metric"); }));
+            data.forEach(function(d) {
+              d.year = parseDate(d.year);
+
+            });
+
+            // filter the read-in data set based on
+            var filtered_raw_data = data.filter(function(row){
+                        return row['metric'] == metric_input;
+                        });
+
+            var metric_data = color.domain().map(function(name) {
+              return {
+                name: name,
+                values: filtered_raw_data.map(function(d) {
+                  return {year: d.year, metric_name: d.metric, metric_value: +d[county_selection]};
+                })
+              };
+            });
+
+            xScale.domain(d3.extent(data, function(d) { return d.year; }));
+
+            yScale.domain([
+              d3.min(metric_data, function(c) { return d3.min(c.values, function(v) { return v.metric_value; }); }),
+              d3.max(metric_data, function(c) { return d3.max(c.values, function(v) { return v.metric_value; }); })
+            ]);
+
+            svg1.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+            svg1.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+              .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end");
+
+
+            var metric_data = svg1.selectAll(".metric_data")
+                .data(metric_data)
+              .enter().append("g")
+                .attr("class", "magnitude");
+
+
+            metric_data.append("path")
+                .attr("class", "line")
+                .attr("d", function(d) { return line(d.values); })
+                .style("stroke", "blue");
+
+
+            metric_data.selectAll("circle")
+              .data(function(d){ return d.values})
+              .enter()
+              .append("circle")
+              // .attr("r", 3)
+              .attr("r", 3)
+              .attr("cx", function(d) { return xScale(d.year); })
+              .attr("cy", function(d) { return yScale(d.metric_value); })
+              .on('mouseover', d => {
+                div
+                  .transition()
+                  .duration(200)
+                  .style('opacity', 0.9);
+                div
+                  .html(d.year.getFullYear() + '<br/>' + d.metric_value)
+                  .style('left', d3.event.pageX + 'px')
+                  .style('top', d3.event.pageY - 28 + 'px');
+              })
+              .on('mouseout', () => {
+                div
+                  .transition()
+                  .duration(500)
+                  .style('opacity', 0);
+              });
+          });
+
+
+          //Create Title
+          svg1.append("text")
+            .attr("x", width / 2 )
+            .attr("y", height-(height+7))
+            .style("text-anchor", "middle")
+            .text("hellow 2000-2017" + label_metric(metric_input));
+
+
+          // Create Axis Lables
+          // text label for the x axis
+          svg1.append("text")
+              .attr("transform",
+                    "translate(" + (width/2) + " ," +
+                                   (height + margin.top-10) + ")")
+              .style("text-anchor", "middle")
+              .text("Year");
+
+          // text label for the y axis
+          svg1.append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 0 - (margin.left-50))
+              .attr("x",0 - (height / 2))
+              .attr("dy", "1em")
+              .style("text-anchor", "middle")
+              .text(label_metric(metric_input));
+
+// 2000_deaths_age_adj	2010_deaths_age_adj	2017_deaths_age_adj	predicted_deaths_age_adj
+
+  </script>
+
+</body>
+</html>

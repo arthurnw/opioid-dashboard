@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Team JAKEWAMA - Opioid Mortality Rate</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+    </head>
+
+
+    <body>
+        <header>
+            <h2>Opioid-Related Mortality Rate</h2>
+            <h5>Team JAKEWAMA</h5>
+        </header>
+
+        <div class="row">
+            <div class="column left" style="background-color:#aaa;" id="navColumn">
+                <h2>Investigation View</h2>
+                <p>Investigate the historical and current demographic and opioid mortality rate data.<br><br></p>
+                <p><strong>Change to: </strong><a href="prediction.html">Prediction View</a><br><br>Leverages demographic features to predict mortality rates at the county-level.<br><br></p>
+                <h2>Map Criteria</h2>
+                <p><b>Year Range:</b>
+                <select class="dropdown" id="selectYear" autocomplete="off">
+                        <option value='{"year" : "2000", "label" : "2000 - 2005"}' selected="selected">2000-2005</option>
+                        <option value='{"year" : "2010", "label" : "2006 - 2011"}'>2006-2011</option>
+                        <option value='{"year" : "2017", "label" : "2012 - 2017"}'>2012-2017</option>
+                </select></p>
+                <p><b>Metric:</b>
+                <select class="dropdown" id="selectMetric" autocomplete="off">
+                        <option value='{"metric" : "deaths_age_adj" , "label" : "Age-Adjusted Death Rate"}' selected="selected">Age-Adjusted Death Rate</option>
+                        <option value='{"metric" : "md_per_100k"    , "label" : "Mean Deaths per 100k"}'>Mean Deaths per 100k</option>
+                        <option value='{"metric" : "deaths"         , "label" : "Raw Death Counts"}'>Raw Death Counts</option>
+                </select><br><br></p>
+                <p id="metricDesc"></p><br>
+
+                <h2>Map Instructions</h2>
+                <h5>Full US View:</h5>
+                <ul>
+                    <li>Hover over an area to see statistics</li>
+                    <li>Double click a state to zoom in to County View</li>
+                </ul>
+                <h5>Zoomed County View:</h5>
+                <ul>
+                    <li>Click a county to update sub plots</li>
+                    <li>Double click the state to zoom out</li>
+                    <li>Double click an adjacent state to change state</li>
+                </ul>
+            </div>
+
+            <div class="column right" style="background-color:#ccc;">
+
+                <div class = "mainrow" >
+                        <div class="main mleft" style="background-color:#ccc;" id="map_container">
+                        </div>
+                        <div class="main mright" style="background-color:#ccc;" id="map_legend">
+                        </div>
+                </div>
+
+                <div class = "bottomrow" id='brow' style="text-align: center;">
+                    <hr>
+                    <h3>Select a County</h3>
+                    <div class="bottom bleft" style="background-color:#ccc;" id="subplot_left">
+                    </div>
+                    <div class="bottom bmiddle" style="background-color:#ccc;" id="subplot_right">
+                        <h4></h4>
+                    </div>
+                    <div class="bottom bright" style="background-color:#ccc;" id="subplot_right_dropdown">
+                        
+                        <select class="dropdown" id="selectDemo" >
+                            <option value='age' selected="selected">Age</option>
+                            <option value='education'>Education</option>
+                            <option value='ethnicity'>Ethnicity</option>
+                            <option value='gender'>Gender</option>
+                            <option value='income'>Income</option>
+                            <option value='poverty'>Poverty</option>
+                            <option value='unemployment'>Unemployment</option>
+                        </select>
+                        <br><br>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="assets/d3-tip.js"></script>
+        <script type="text/javascript" src="assets/investigate.js"></script>
+
+    </body>
+
+</html>
